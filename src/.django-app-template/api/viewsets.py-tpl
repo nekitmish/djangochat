@@ -1,0 +1,3 @@
+from {{ app_name }}.api import serializers
+
+# Create your API views and viewsets here.

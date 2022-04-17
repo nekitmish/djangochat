@@ -1,0 +1,5 @@
+Django
+djangorestframework
+djangorestframework-camel-case
+django-environ
+django-split-settings
