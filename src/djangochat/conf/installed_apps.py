@@ -2,6 +2,7 @@ APPS = [
     'djangochat',
     'users',
     'chats',
+    'messages',
 ]
 
 THIRD_PARTY_APPS = [
