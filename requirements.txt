@@ -9,8 +9,11 @@ asgiref==3.5.0
 django==3.2.12
     # via
     #   -r requirements.in
+    #   django-filter
     #   djangorestframework
 django-environ==0.8.1
+    # via -r requirements.in
+django-filter==21.1
     # via -r requirements.in
 django-split-settings==1.1.0
     # via -r requirements.in

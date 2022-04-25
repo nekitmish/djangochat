@@ -7,6 +7,8 @@ from messages.api import viewsets
 
 router = SimpleRouter()
 
+router.register('', viewsets.MessageViewSet)
+
 urlpatterns = [
     path('', include(router.urls)),
 ]
