@@ -4,6 +4,12 @@ from djangochat.models import DefaultModel
 from users.models import User
 
 
+class ChatQuerySet(models.QuerySet):
+    def for_viewset(self):
+        return self.prefetch_related('sent_messages', 'received_messages')\
+            .select_related('companion')
+
+
 class Chat(DefaultModel):
     me = models.ForeignKey(
         'users.User',
@@ -27,3 +33,5 @@ class Chat(DefaultModel):
     is_unread = models.BooleanField(
         default=False,
     )
+
+    objects = ChatQuerySet.as_manager()

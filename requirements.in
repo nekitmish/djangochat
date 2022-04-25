@@ -3,3 +3,4 @@ djangorestframework
 djangorestframework-camel-case
 django-environ
 django-split-settings
+django-filter
