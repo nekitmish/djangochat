@@ -15,5 +15,5 @@ class ChatCreator(BaseService):
     def create_my_chat(self):
         return Chat.objects.create(
             me=self.me,
-            companion_id=self.companion,
+            companion=self.companion,
         )
