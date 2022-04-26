@@ -7,6 +7,9 @@ DISABLE_THROTTLING = env('DISABLE_THROTTLING', cast=bool, default=False)
 MAX_PAGE_SIZE = env('MAX_PAGE_SIZE', cast=int, default=1000)
 
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ),
